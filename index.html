@@ -83,6 +83,10 @@ body.embed h1,body.embed .hint,body.embed .nav{display:none}
 .marcador div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:6px 10px;text-align:center;min-width:72px}
 .marcador small{display:block;color:var(--muted);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
 .marcador b{font-size:17px;font-variant-numeric:tabular-nums}
+details.ayuda{color:var(--muted);font-size:13px;line-height:1.5;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 14px}
+details.ayuda summary{cursor:pointer;color:var(--accent);font-weight:600;text-align:center}
+details.ayuda[open] summary{margin-bottom:4px}
+details.ayuda p{margin:8px 0 0}
 </style>
 </head>
 <body>
@@ -104,7 +108,7 @@ body.embed h1,body.embed .hint,body.embed .nav{display:none}
     <button id="dia" title="Las mismas cartas, en el mismo sitio, para todo el mundo, cada día">Del día</button>
   </div>
   <div class="tablero" id="tablero" role="grid" aria-label="Cartas"></div>
-  <p class="hint" id="ayuda"></p>
+  <details class="ayuda"><summary>Cómo se juega</summary><p id="ayuda"></p></details>
   <div class="win" id="win" hidden><div><h2>¡Completado!</h2><p id="wintxt"></p><button id="otra" class="pri">Otra partida</button></div></div>
 </div>
 <script>
